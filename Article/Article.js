@@ -147,6 +147,12 @@ function createArticle(object) {
   paragraphThree.textContent = object.thirdParagraph;
   expand.textContent = "expand";
 
+  // add event listener to expandButton span...toggles the class 'article-open' on the 'article' div
+  expand.addEventListener("click", event => {
+    //console.log("button clicked", event.target);
+    article.classList.toggle("article-open");
+  })
+
   // return statement
   return article;
 }
