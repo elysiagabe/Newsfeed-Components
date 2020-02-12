@@ -85,6 +85,20 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'I am another article',
+    date: 'Feb 10, 2020',
+    firstParagraph: 'Hello, I am another article to read.',
+    secondParagraph: 'Article article article article article article article article article article article. This is an article article article article article article article article article article. Article article article article article article article article article article article. This is an article article article article article article article article article article.',
+    thirdParagraph: 'This is the final paragraph in this article.'
+  },
+  {
+    title: 'ANOTHER article',
+    date: 'Feb 12, 2020',
+    firstParagraph: 'A new article.',
+    secondParagraph: 'If you\'re literate, you can read me.',
+    thirdParagraph: 'That\'s all I have to say about that.'
   }
 ];
 
