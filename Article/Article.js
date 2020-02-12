@@ -112,3 +112,48 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+// sets up parent element...will append articles created to this
+const parentDiv = document.querySelector(".articles");
+
+function createArticle(object) {
+  // define new elements
+  let article = document.createElement("div");
+  let articleTitle = document.createElement("h2");
+  let articleDate = document.createElement("p");
+  let paragraphOne = document.createElement("p");
+  let paragraphTwo = document.createElement("p");
+  let paragraphThree = document.createElement("p");
+  let expand = document.createElement("span");
+
+  // set structure
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(paragraphOne);
+  article.appendChild(paragraphTwo);
+  article.appendChild(paragraphThree);
+  article.appendChild(expand);
+
+  // set classes
+  article.classList.add("article");
+  articleDate.classList.add("date");
+  expand.classList.add("expandButton");
+
+  // add content
+  articleTitle.textContent = object.title;
+  articleDate.textContent = object.date;
+  paragraphOne.textContent = object.firstParagraph;
+  paragraphTwo.textContent = object.secondParagraph;
+  paragraphThree.textContent = object.thirdParagraph;
+  expand.textContent = "expand";
+
+  // return statement
+  return article;
+}
+
+// map thru provided data and create articles for each, then appends article to parent
+data.map(datum => {
+  console.log("creating article", datum.title)
+  parentDiv.appendChild(createArticle(datum))
+})
+
