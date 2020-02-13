@@ -102,8 +102,22 @@
   transform: translate(-50%);
   background-color: white;
 }
+.article .closeButton {
+  position: absolute;
+  left: 96.5%;
+  padding: 4px 8px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+.article .closeButton:hover {
+  color: red;
+  border-color: red;
+}
 .article-open {
   height: 400px;
+}
+.article-remove {
+  display: none;
 }
 html,
 body {

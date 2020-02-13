@@ -139,6 +139,8 @@ function createArticle(object) {
   let paragraphTwo = document.createElement("p");
   let paragraphThree = document.createElement("p");
   let expand = document.createElement("span");
+    // add x button
+  let closeButton = document.createElement("button");
 
   // set structure
   article.appendChild(articleTitle);
@@ -147,11 +149,15 @@ function createArticle(object) {
   article.appendChild(paragraphTwo);
   article.appendChild(paragraphThree);
   article.appendChild(expand);
+    // prepend closeButton
+  article.prepend(closeButton);
 
   // set classes
   article.classList.add("article");
   articleDate.classList.add("date");
   expand.classList.add("expandButton");
+    // closeButton class
+  closeButton.classList.add("closeButton");
 
   // add content
   articleTitle.textContent = object.title;
@@ -160,11 +166,18 @@ function createArticle(object) {
   paragraphTwo.textContent = object.secondParagraph;
   paragraphThree.textContent = object.thirdParagraph;
   expand.textContent = "expand";
+    // add text to closeButton
+  closeButton.textContent = "X";
 
   // add event listener to expandButton span...toggles the class 'article-open' on the 'article' div
   expand.addEventListener("click", event => {
     //console.log("button clicked", event.target);
     article.classList.toggle("article-open");
+  })
+
+  // click event listener on closeButton
+  closeButton.addEventListener("click", event => {
+    article.classList.toggle("article-remove");
   })
 
   // return statement
